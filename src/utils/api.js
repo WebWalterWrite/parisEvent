@@ -20,7 +20,6 @@ export const AllEvents = async (categorie) => {
         const id = await getId(categorie);
      
         const result = await axios.get(`${'https://cors-anywhere.herokuapp.com/'}https://api.paris.fr/api/data/2.2/QueFaire/get_events/?token=${token}&categories=${id}&tags=&start=&end=&offset=&limit=`);
-        console.log(result)
         return result.data;
     }
     catch(err) {
