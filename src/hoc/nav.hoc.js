@@ -35,18 +35,27 @@ const Nav = styled.nav`
 `
 
 const Links = styled(Link)`
-    ${media.desktop`
-        display:none;
-    `}
     ${media.iphonePlus`
         font-size:10px;
         display:flex; 
         justify-content:space-around;
-        div{width:70%; text-align:center;}
-        img{ width:100%;}
+
+    `}
+`
+const Div = styled.div`
+    ${media.desktop`
+        width:100%; text-align:center;
+        img{ width:100%; display:none;}
+        p:nth-child(1n+1){display:none}
+        p:nth-child(2n+1){display:block}
     `}
 
-    
+    ${media.iphonePlus`
+        width:60%; text-align:center;
+        img{ width:100%; display:block;}
+        p:nth-child(1n+1){display:block}
+        p:nth-child(2n+1){display:none}
+    `}
 `
 
 // retourne un menu 
@@ -58,10 +67,11 @@ export const Mapper = (props) => {
                 return (
                     <li key={i}>
                     <Links to={`/parisbyme/evenement/${elem.name}`}>
-                        <div>
+                        <Div>
                             <img src={elem.img} alt=""/>
                             <p>{elem.shortname}</p>
-                        </div>
+                            <p>{elem.name}</p>
+                        </Div>
                     </Links><hr/></li>
                 )
             })}
