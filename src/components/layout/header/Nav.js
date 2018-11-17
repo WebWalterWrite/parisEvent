@@ -7,6 +7,7 @@ import bx from '../../../images/beaux_arts.png';
 import artco from '../../../images/arct_co.png';
 
 
+
 const nav = [
     {name:'Expositions',shortname:'Expo', img:expo},
     {name: 'Humour', shortname:'Humour', img:humour},
