@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import {colors}  from '../../../styles/color';
 import {media} from '../../../styles/responsive.styled';
 
+
 const line = keyframes`
     0%{width:5%;}
     20%{width:20%}
@@ -11,6 +12,7 @@ const line = keyframes`
 `
 
 export const Head = styled.header`
+
     background-color: ${colors.blackop};
     border-bottom: solid 1px #FFF;
     padding-top: 20px;
@@ -18,7 +20,6 @@ export const Head = styled.header`
     & nav{
         margin-top:20px;
         ul>li>a{ 
-        font-size:18px;
         font-weight: bold;
         letter-spacing: 3px;
         font-family: 'Quattrocento', serif;
@@ -41,7 +42,6 @@ export const Head = styled.header`
         }
     ${media.desktop`
         >div{
-          
             display:flex;
             align-items:center;
             & h1{
